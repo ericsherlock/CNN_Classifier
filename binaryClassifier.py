@@ -19,8 +19,8 @@ from matplotlib import pyplot
 import numpy as np
 
 #Read In An Process Text Corpora
-#corpora = open("blogGenerDataset.txt", "r").readlines()
-corpora = open("subObj.txt", "r").readlines()
+#corpora = open("BlogGenderDataset.txt", "r").readlines()
+corpora = open("SubjectiveObjectiveDataset.txt", "r").readlines()
 corpLab = [1]*(len(corpora)/2)
 corpLab.extend([0]*(len(corpora)/2))
 
@@ -57,7 +57,7 @@ print("SHAPE XTEST: ", x_test.shape)
 print("SHAPE YTEST: ", y_test.shape)
 
 #Load The Embeddings From Word2Vec File
-embedFile = open("/media/sherlock/24726FCA79BCB662/ProjectHomework/GoogleNews-vectors-negative300.bin.gz.txt", "r")
+embedFile = open("GoogleNews-vectors-negative300.bin.gz.txt", "r")
 embedIndex = {}
 i = 0
 for line in embedFile:
